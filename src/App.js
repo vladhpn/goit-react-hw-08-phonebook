@@ -7,7 +7,8 @@ import AppBar from './components/AppBar';
 import Register from './views/Register';
 import Login from './views/Login';
 import { ToastContainer } from 'react-toastify';
-import { operations, selectors } from './redux/contacts';
+import { selectors } from './redux/contacts';
+import { authOperations } from './redux/auth';
 import routes from './routes';
 import Spinner from './components/Spinner';
 import 'react-toastify/dist/ReactToastify.css';
@@ -15,7 +16,7 @@ import 'modern-normalize/modern-normalize.css';
 
 class App extends Component {
   componentDidMount() {
-    this.props.fetchContacts();
+    this.props.onGetCurrentUser();
   }
   render() {
     return (
@@ -39,8 +40,8 @@ const mapStateToProps = state => ({
   isLoadingContacts: selectors.getIsLoading(state),
 });
 
-const mapDispatchToProps = dispacth => ({
-  fetchContacts: () => dispacth(operations.fetchContacts()),
-});
+const mapDispatchToProps = {
+  onGetCurrentUser: authOperations.getCurrentUser,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

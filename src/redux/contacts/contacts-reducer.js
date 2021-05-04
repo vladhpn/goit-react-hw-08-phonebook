@@ -31,8 +31,7 @@ const loading = createReducer(false, {
   [addContactError]: () => false,
   [deleteContactRequest]: () => true,
   [deleteContactSuccess]: () => false,
-  deleteContactError,
-  [addContactError]: () => false,
+  [deleteContactError]: () => false,
 });
 
 const filter = createReducer('', {
