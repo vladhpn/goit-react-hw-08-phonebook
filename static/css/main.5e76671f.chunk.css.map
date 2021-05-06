@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/Spinner/styles.module.scss"],"names":[],"mappings":"AAAA,uBACE,oBAAA,CAAA,YAAA,CACA,8BAAA,CAAA,sBAAA,CACA,gBAAA","file":"main.5e76671f.chunk.css","sourcesContent":[".Spinner {\n  display: flex;\n  justify-content: center;\n  margin-top: 200px;\n}\n"]}
