@@ -1,34 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { authSelectors, authOperations } from '../../redux/auth';
-// import defaultAvatar from './default-avatar.png';
+import defaultAvatar from '../../images/avatar.jpeg';
+import styles from './styles.module.scss'
 
-const styles = {
-  container: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  avatar: {
-    marginRight: 4,
-  },
-  name: {
-    fontWeight: 700,
-    marginRight: 12,
-  },
-};
 
 const UserMenu = ({ avatar, name, onLogout }) => (
-  <div style={styles.container}>
-    {/* <img src={avatar} alt="" width="32" style={styles.avatar} /> */}
-    <span style={styles.name}>Welcome, {name} </span>
-    <button type="button" onClick={onLogout}>
+  <div className={styles.container}>
+    <img src={avatar} alt="" width="32" className={styles.avatar} />
+    <span className={styles.name}>Welcome, <span className={styles.user_name}>{name}</span>  </span>
+    <button className={styles.button} type="button" onClick={onLogout}>
       Logout
     </button>
   </div>
 );
 const mapStateToProps = state => ({
   name: authSelectors.getUserName(state),
-  // avatar: defaultAvatar,
+  avatar: defaultAvatar,
 });
 
 const mapDispatchToProps = {

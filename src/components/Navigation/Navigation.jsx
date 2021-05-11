@@ -13,7 +13,7 @@ const styles = {
     color: '#2A363B',
   },
   activeLink: {
-    color: '#E84A5F',
+    color: '#2196f3',
   },
 };
 
@@ -30,7 +30,7 @@ const Navigation = ({isAuthenticated}) => (
       style={styles.link}
       activeStyle={styles.activeLink}
     >
-      Your Contacts
+      Contacts
     </NavLink>
     )}
 

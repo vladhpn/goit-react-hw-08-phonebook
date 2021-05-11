@@ -1,17 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import  { authOperations }  from '../../redux/auth';
+import styles from './styles.module.scss'
 
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
 
 class Register extends Component {
   state = {
@@ -37,44 +28,47 @@ class Register extends Component {
 
     return (
       <div>
-        <h1>Register</h1>
-
+        <h1 className={styles.title}>Register</h1>
         <form
           onSubmit={this.handleSubmit}
-          style={styles.form}
+          className={styles.form}
           autoComplete="off"
         >
-          <label style={styles.label}>
-            Имя
+          <label className={styles.label}>
             <input
+            className={styles.input}
               type="text"
               name="name"
+              placeholder="Username"
               value={name}
               onChange={this.handleChange}
             />
           </label>
 
-          <label style={styles.label}>
-            Почта
+          <label className={styles.label}>   
             <input
+              className={styles.input}
               type="email"
               name="email"
+              placeholder="Email"
               value={email}
               onChange={this.handleChange}
             />
           </label>
 
-          <label style={styles.label}>
-            Пароль
+          <label className={styles.label}>
+            
             <input
+              className={styles.input}
               type="password"
               name="password"
+              placeholder="Password"
               value={password}
               onChange={this.handleChange}
             />
           </label>
 
-          <button type="submit">Зарегистрироваться</button>
+          <button className={styles.button} type="submit">Register</button>
         </form>
       </div>
     );

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { operations } from '../../redux/contacts';
 import { toast } from 'react-toastify';
 import styles from '../Form/styles.module.scss';
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
 
 class Form extends Component{
@@ -73,7 +74,7 @@ class Form extends Component{
                   required
                 />
               </label>
-              <button className={styles.button} type='submit'><span className={styles.content}>Add contact</span> </button>
+              <button className={styles.button} type='submit'><span className={styles.content}>Add contact</span> <PersonAddIcon/></button>
             </form>
             
           </>)

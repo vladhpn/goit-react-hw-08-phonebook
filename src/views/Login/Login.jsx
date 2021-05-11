@@ -1,17 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { authOperations } from '../../redux/auth';
+import styles from './styles.module.scss'
 
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
 
 class Login extends Component {
   state = {
@@ -36,34 +27,36 @@ class Login extends Component {
 
     return (
       <div>
-        <h1>Страница логина</h1>
+        <h1 className={styles.title}>Login</h1>
 
         <form
           onSubmit={this.handleSubmit}
-          style={styles.form}
+          className={styles.form}
           autoComplete="off"
         >
-          <label style={styles.label}>
-            Почта
+          <label className={styles.label}>
             <input
+            className={styles.input}
               type="email"
               name="email"
               value={email}
+              placeholder="Email"
               onChange={this.handleChange}
             />
           </label>
 
-          <label style={styles.label}>
-            Пароль
+          <label className={styles.label}>
             <input
+            className={styles.input}
               type="password"
               name="password"
               value={password}
+              placeholder="Password"
               onChange={this.handleChange}
             />
           </label>
 
-          <button type="submit">Войти</button>
+          <button className={styles.button} type="submit">Войти</button>
         </form>
       </div>
     );

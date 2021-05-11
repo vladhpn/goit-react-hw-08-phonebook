@@ -6,12 +6,13 @@ const styles = {
   link: {
     display: 'inline-block',
     textDecoration: 'none',
+    marginRight: 15,
     padding: 12,
     fontWeight: 700,
     color: '#2A363B',
   },
   activeLink: {
-    color: '#E84A5F',
+    color: '#2196f3',
   },
 };
 

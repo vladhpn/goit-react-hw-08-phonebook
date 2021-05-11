@@ -56,7 +56,6 @@ class App extends Component {
           </Switch>
         </Suspense>
 
-        {/* {this.props.isLoadingContacts ? <Spinner /> : <ContactList />}  */}
         <ToastContainer />
       </>
     );
