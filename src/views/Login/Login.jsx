@@ -56,7 +56,7 @@ class Login extends Component {
             />
           </label>
 
-          <button className={styles.button} type="submit">Войти</button>
+          <button className={styles.button} type="submit">Login</button>
         </form>
       </div>
     );
